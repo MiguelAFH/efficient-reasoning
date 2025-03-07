@@ -10,6 +10,8 @@ exec > >(tee -a "$LOG_FILE") 2>&1
 
 set -x
 
+export CUDA_VISIBLE_DEVICES=0
+
 read -r -d '' training_commands <<EOF
 openrlhf.cli.train_dpo \
    --save_path ../checkpoints/deepseek_qwen_1.5B \
@@ -20,8 +22,8 @@ openrlhf.cli.train_dpo \
    --micro_train_batch_size 1 \
    --pretrain deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
    --bf16 \
-   --max_epochs 1 \
-   --max_len 8192 \
+   --max_epochs 2 \
+   --max_len 120000 \
    --zero_stage 3 \
    --learning_rate 5e-7 \
    --beta 0.1 \
