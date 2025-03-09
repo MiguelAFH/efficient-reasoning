@@ -14,5 +14,5 @@ python3 ../src/dpo_dataset.py \
     --dataset_name "open-r1/OpenR1-Math-220k" \
     --data_dir ../data/ \
     --method diff
-
+    
 echo "Dataset creation complete."

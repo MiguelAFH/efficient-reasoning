@@ -5,7 +5,9 @@ import numpy as np
 from datasets import load_dataset, DatasetDict
 
 
-def filter_pairs(ds: DatasetDict) -> DatasetDict:
+def filter_pairs(
+    ds: DatasetDict
+) -> DatasetDict:
     """
     Filters dataset to contain only rows where there are 2 correct generations
     """
@@ -52,7 +54,11 @@ def filter_shortest_k_generations(
     return filtered_dataset
 
 
-def filter_ds(ds: DatasetDict, topK: int, method: str) -> DatasetDict:
+def filter_ds(
+    ds: DatasetDict, 
+    topK: int, 
+    method: str
+) -> DatasetDict:
     """
     Filters the dataset to:
     1. Contain exactly two correct generations.
