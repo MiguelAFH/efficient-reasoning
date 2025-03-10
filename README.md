@@ -58,3 +58,14 @@ This script will:
 1. Load the processed dataset from Step 1.
 2. Run DPO training using a target language model (by default, DeepSeek).
 3. Save checkpoints and training logs for future analysis.
+
+### Step 3: Evaluate the models:
+Run the evaluation script using:
+
+```
+bash scripts/eval.sh
+```
+
+This script will:
+1. Run the omni_math benchmark on the baseline and DPO model.
+2. Create a leaderboard with these two models.
