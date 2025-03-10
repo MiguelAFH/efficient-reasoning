@@ -22,8 +22,8 @@ openrlhf.cli.train_dpo \
    --micro_train_batch_size 1 \
    --pretrain deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
    --bf16 \
-   --max_epochs 2 \
-   --max_len 120000 \
+   --max_epochs 3 \
+   --max_len 8192 \
    --zero_stage 3 \
    --learning_rate 5e-7 \
    --beta 0.1 \

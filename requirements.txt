@@ -1,3 +1,11 @@
 crfm-helm
 datasets
+ipykernel
+jupyter
+matplotlib
 numpy
+pandas
+scikit-learn
+seaborn
+tiktoken
+tqdm
