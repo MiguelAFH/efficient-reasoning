@@ -8,11 +8,27 @@ The project works by processing the `OpenR1-Math-220k` dataset, filtering it to 
 
 ## Installation
 
-To set up the environment, use Conda to create and activate a virtual environment using `env.yaml`.
+1. To set up the environment, use Conda to create and activate a virtual environment using `env.yaml`.
 
 ```bash
 conda env create -f env.yaml
 conda activate efficient-reasoning
+```
+
+2. Install OpenRLHF
+
+Once the python venv is enabled, install OpenRLHF via:
+
+```bash
+pip install git+https://github.com/OpenRLHF/OpenRLHF.git
+```
+
+3. Install HELM
+
+Now, install HELM to be able to evaluate our models.
+
+```bash
+pip install crfm-helm
 ```
 
 ## Quick Start
