@@ -128,7 +128,7 @@ if __name__ == '__main__':
     parser.add_argument('--method', type=str, default='shortest', help='Method to filter samples (shortest or diff)')
     parser.add_argument('--max_length', type=int, default=8192, help='Max length')
     parser.add_argument('--min_length_difference', type=int, default=300, help='Max length')
-    parser.add_argument('--output_dir', type=int, default=300, help='Max length')
+    parser.add_argument('--output_dir', type=str, default='../data/open-r1/OpenR1-Math-220k_filtered', help='Output directory')
 
     args = parser.parse_args()
 
