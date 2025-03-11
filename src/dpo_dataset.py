@@ -128,6 +128,7 @@ if __name__ == '__main__':
     parser.add_argument('--method', type=str, default='shortest', help='Method to filter samples (shortest or diff)')
     parser.add_argument('--max_length', type=int, default=8192, help='Max length')
     parser.add_argument('--min_length_difference', type=int, default=300, help='Max length')
+    parser.add_argument('--output_dir', type=int, default=300, help='Max length')
 
     args = parser.parse_args()
 
@@ -140,10 +141,9 @@ if __name__ == '__main__':
 
     # Save to disk
     os.makedirs(args.data_dir, exist_ok=True)
-    save_path = os.path.join(args.data_dir, f'{args.dataset_name}_filtered')
-    filtered_ds.save_to_disk(save_path)
+    filtered_ds.save_to_disk(args.output_dir)
 
-    print(f"Filtered dataset saved to '{save_path}'")
+    print(f"Filtered dataset saved to '{args.output_dir}'")
 
     # Extract max generation lengths into a list
     max_lengths = filtered_ds['train']['max_length']
