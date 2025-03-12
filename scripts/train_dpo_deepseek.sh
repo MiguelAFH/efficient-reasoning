@@ -11,7 +11,7 @@ exec > >(tee -a "$LOG_FILE") 2>&1
 
 set -x
 
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=1
 
 read -r -d '' training_commands <<EOF
 openrlhf.cli.train_dpo \
@@ -23,12 +23,12 @@ openrlhf.cli.train_dpo \
    --micro_train_batch_size 1 \
    --pretrain deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B \
    --bf16 \
-   --max_epochs 3 \
+   --max_epochs 1 \
    --max_len 8192 \
    --zero_stage 3 \
    --learning_rate 5e-7 \
-   --beta 0.1 \
-   --dataset ../data/open-r1/OpenR1-Math-220k_filtered/ \
+   --beta 2 \
+   --dataset ../data/open-r1/OpenR1-Math-220k_filtered_2025-03-12_04-22-02 \
    --apply_chat_template \
    --chosen_key chosen \
    --rejected_key rejected \

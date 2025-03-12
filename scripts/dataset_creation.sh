@@ -15,6 +15,7 @@ python3 ../src/dpo_dataset.py \
     --dataset_name "open-r1/OpenR1-Math-220k" \
     --data_dir ../data/ \
     --method diff \
+    --min_length_difference 500 \
     --output_dir ../data/open-r1/OpenR1-Math-220k_filtered_$DATE
     
 echo "Dataset creation complete."
