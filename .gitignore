@@ -1,1 +1,4 @@
 OpenRLHF/
+*.png
+*.jpg
+*__pycache__/
